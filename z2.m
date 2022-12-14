@@ -40,7 +40,7 @@ SB = 1/3*(M1 - M0)*(M1 - M0)' ...
     + 1/3*(M3 - M0)*(M3 - M0)';
 T = SW^-1*SB;
 [P, L] = eig(T); 
-P = -P; % smer nebitan za separabilnost al su promenili smer u novoj verziji
+P = P; % smer nebitan za separabilnost al su promenili smer u novoj verziji
 
 A = P(:, 1:2); % jedine dve nenulte sopstvene vrednosti
 Y1_train = A'*X1_train';
